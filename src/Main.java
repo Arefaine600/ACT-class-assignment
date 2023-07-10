@@ -1,16 +1,19 @@
-class MainFizzBuzz{
+import java.util.Scanner;
+class MainJavaPoint {
     public static void main(String[] args) {
-        for(int number = 0; number <= 100; ++number){
-            if((number % 3 == 0) && (number % 5 == 0)){
-                System.out.println("FIZZBUZZ");
-            } else if(number % 3 == 0){
-                System.out.println("FIZZ");
-            } else if(number % 5 == 0){
-                System.out.println("BUZZ");
-            }  else{
-                System.out.println(number);
-            }
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("please insert number ");
+        int aNumber = scanner.nextInt();
+        int reversedNumber = 0;
+        for (; aNumber!=0; aNumber/=10){
+            int remainder = aNumber%10;
+            reversedNumber = reversedNumber*10 +remainder;
+
+
+        }
+        System.out.println("reversed number is : " + reversedNumber);
+
 
     }
 }
-}
+
